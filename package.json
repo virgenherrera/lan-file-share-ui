@@ -1,5 +1,5 @@
 {
-  "name": "angular-base",
+  "name": "lan-file-share-ui",
   "version": "0.0.9",
   "license": "MIT",
   "engines": {
@@ -17,7 +17,8 @@
     "test:static": "eslint \"src/**/*.ts\"",
     "test:unit": "ng test --no-watch --code-coverage --browsers=ChromeHeadless",
     "build:prod": "ng build --optimization --progress --subresource-integrity --delete-output-path",
-    "cleanup": "rimraf .angular/ coverage/ dist/"
+    "cleanup": "rimraf .angular/ coverage/ dist/",
+    "install": "run-s cleanup build:*"
   },
   "dependencies": {
     "@angular/animations": "^15.2.7",

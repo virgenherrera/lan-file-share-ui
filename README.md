@@ -19,7 +19,7 @@ npm install
 $ npm run start
 
 # production mode.
-$ npm run build:prod && npx http-server ./dist/angular-base/
+$ npm run build:prod && npx http-server ./dist/lan-file-share-ui/
 ```
 
 ## Testing the app
