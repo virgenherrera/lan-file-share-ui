@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 describe(`UT: ${AppComponent.name}`, () => {
   const enum should {
     createInstance = 'should create the app',
-    haveTitleAndRenderIt = "should have as title 'angular-base' and redder it",
+    haveTitleAndRenderIt = "should have as title 'lan-file-share-ui' and redder it",
   }
 
   const createComponent = createComponentFactory({

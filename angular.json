@@ -7,7 +7,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-base": {
+    "lan-file-share-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-base",
+            "outputPath": "dist/lan-file-share-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-base:build:production"
+              "browserTarget": "lan-file-share-ui:build:production"
             },
             "development": {
-              "browserTarget": "angular-base:build:development"
+              "browserTarget": "lan-file-share-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-base:build"
+            "browserTarget": "lan-file-share-ui:build"
           }
         },
         "test": {
