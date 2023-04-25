@@ -1,0 +1,14 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "angular.ng-template",
+    "DavidAnson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "kisstkondoros.vscode-codemetrics",
+    "redhat.vscode-yaml",
+    "usernamehw.errorlens"
+  ]
+}
