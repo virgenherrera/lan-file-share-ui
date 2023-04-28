@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span>Lan File Share</span>
+
+  <span class="spacer"></span>
+
+  <button mat-fab color="primary" aria-label="home icon">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button
+    #uploadMenuTrigger
+    mat-stroked-button
+    [matMenuTriggerFor]="uploadMenu"
+  >
+    Upload...
+  </button>
+</mat-toolbar>
+
+<mat-menu #uploadMenu="matMenu">
+  <button id="upload-file" mat-menu-item (click)="openUploadFile()">
+    a File
+  </button>
+  <button id="upload-many-files" mat-menu-item (click)="openUploadFiles()">
+    many Files
+  </button>
+</mat-menu>
