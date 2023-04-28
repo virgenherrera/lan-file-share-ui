@@ -1,0 +1,47 @@
+<mat-list *ngIf="folderInfo; else loading">
+  <div mat-subheader>Folders</div>
+
+  <mat-list-item *ngIf="path.parent">
+    <mat-icon mat-list-icon>subdirectory_arrow_left</mat-icon>
+    <div mat-line>
+      <button
+        mat-stroked-button
+        (click)="goToParent()"
+        [innerText]="path.parent.name"
+      ></button>
+    </div>
+  </mat-list-item>
+
+  <mat-list-item *ngFor="let folder of folderInfo.folders">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <div mat-line>
+      <button
+        mat-stroked-button
+        (click)="goToChild(folder)"
+        [innerText]="folder"
+      ></button>
+    </div>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+  <div mat-subheader>Files</div>
+  <mat-list-item *ngFor="let file of folderInfo.files">
+    <mat-icon mat-list-icon>note</mat-icon>
+
+    <div mat-line>
+      <a
+        mat-link
+        [download]="file.fileName"
+        [href]="file.href"
+        [innerText]="file.fileName"
+      ></a>
+    </div>
+    <div mat-line>created: {{ file.createdAt | date }}</div>
+    <div mat-line>updated: {{ file.updatedAt | date }}</div>
+  </mat-list-item>
+</mat-list>
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

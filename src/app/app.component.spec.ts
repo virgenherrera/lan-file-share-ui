@@ -4,11 +4,11 @@ import { AppComponent } from './app.component';
 describe(`UT: ${AppComponent.name}`, () => {
   const enum should {
     createInstance = 'should create the app',
-    haveTitleAndRenderIt = "should have as title 'lan-file-share-ui' and redder it",
   }
 
   const createComponent = createComponentFactory({
     component: AppComponent,
+    shallow: true,
   });
   let spectator: Spectator<AppComponent> = null;
 
@@ -17,12 +17,5 @@ describe(`UT: ${AppComponent.name}`, () => {
   it(should.createInstance, () => {
     expect(spectator).not.toBeNull();
     expect(spectator.component).toBeInstanceOf(AppComponent);
-  });
-
-  it(should.haveTitleAndRenderIt, () => {
-    expect(spectator.component).toHaveProperty('title');
-    expect(spectator.query('.card.highlight-card.card-small span')).toHaveText(
-      spectator.component.title,
-    );
   });
 });

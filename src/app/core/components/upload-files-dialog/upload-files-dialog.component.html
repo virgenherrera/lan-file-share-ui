@@ -1,0 +1,47 @@
+<ng-container *ngIf="accept$ | async as accept; else fetchingAccept">
+  <h2 mat-dialog-title>Upload many files</h2>
+
+  <mat-dialog-content class="mat-typography">
+    <ng-container *ngIf="!uploading; else uploadTemplate">
+      <mat-label class="button-label">Select your files</mat-label>
+
+      <button
+        mat-icon-button
+        (click)="fileInput.click()"
+        #tooltip="matTooltip"
+        matTooltip="Info about the action"
+        matTooltipPosition="right"
+      >
+        <mat-icon>cloud_upload</mat-icon>
+      </button>
+      <input
+        #fileInput
+        type="file"
+        hidden
+        multiple
+        [accept]="accept"
+        (change)="inputFileChanged($event)"
+      />
+    </ng-container>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="warn" mat-dialog-close>Back</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!files"
+      (click)="uploadFile()"
+    >
+      Upload
+    </button>
+  </mat-dialog-actions>
+</ng-container>
+
+<ng-template #fetchingAccept>
+  <mat-spinner></mat-spinner>
+</ng-template>
+
+<ng-template #uploadTemplate>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
