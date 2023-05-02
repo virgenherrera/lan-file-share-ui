@@ -3,7 +3,10 @@
     "tagName": "v${version}",
     "commitMessage": "Release ${version}",
     "requireCleanWorkingDir": true,
-    "requireBranch": "master"
+    "requireBranch": "master",
+    "addUntrackedFiles": true,
+    "commit": true,
+    "push": true
   },
   "github": {
     "release": true,
