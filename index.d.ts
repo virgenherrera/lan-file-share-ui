@@ -1,1 +1,1 @@
-export const builtHtmlPath: string;
+export const publicHtmlPath: string;

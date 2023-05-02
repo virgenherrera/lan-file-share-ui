@@ -3,7 +3,12 @@
     "tagName": "v${version}",
     "commitMessage": "Release ${version}",
     "requireCleanWorkingDir": true,
-    "requireBranch": "master"
+    "requireBranch": "master",
+    "commit": false,
+    "commitArgs": "-a",
+    "push": true,
+    "pushArgs": "--follow-tags",
+    "beforeCommit": "npm run before:release"
   },
   "github": {
     "release": true,
