@@ -2,7 +2,7 @@
   "git": {
     "tagName": "v${version}",
     "commitMessage": "Release ${version}",
-    "requireCleanWorkingDir": true,
+    "requireCleanWorkingDir": false,
     "requireBranch": "master",
     "addUntrackedFiles": true,
     "commit": true,
