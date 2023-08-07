@@ -1,6 +1,6 @@
 {
   "name": "lan-file-share-ui",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "license": "MIT",
   "engines": {
     "node": ">=18.12.0 <19",
@@ -16,7 +16,7 @@
     "test:CI": "npm ci",
     "test:static": "eslint \"src/**/*.ts\"",
     "test:unit": "ng test --no-watch --code-coverage --browsers=ChromeHeadless",
-    "build:prod": "ng build --optimization --progress --subresource-integrity --delete-output-path",
+    "build:prod": "ng build --configuration production --optimization --progress --subresource-integrity --delete-output-path",
     "cleanup": "shx rm -rf .angular/ coverage/ dist/",
     "before:release": "run-s -l cleanup test:* build:prod public:*",
     "public:drop": "shx rm -rf public_html/",
