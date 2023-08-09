@@ -12,7 +12,7 @@ describe(`UT: ${SharedFolderService.name}`, () => {
   const enum should {
     createInstance = 'should create the app',
     getRootFolder = 'Should Get root sharedFolder.',
-    getSubFolder = 'Should Get root sharedFolder.',
+    getSubFolder = 'Should Get sub-sharedFolder.',
   }
 
   const createService = createHttpFactory(SharedFolderService);
